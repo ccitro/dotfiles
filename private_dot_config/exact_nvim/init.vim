@@ -1,11 +1,4 @@
-call plug#begin()
-Plug 'gruvbox-community/gruvbox'
-Plug 'tpope/vim-fugitive'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
-call plug#end()
-
-
+lua require('plugins')
 
 " Disable Arrow keys in Normal mode
 map <up> <nop>
