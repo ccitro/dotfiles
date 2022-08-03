@@ -1,0 +1,29 @@
+[user]
+	name = Craig Citro Default
+	email = craig+default@citro.net
+[includeIf "gitdir:~/code/"]
+    path = .gitconfig-abt
+[includeIf "gitdir:~/hobby/"]
+    path = .gitconfig-hobby
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = auto
+[core]
+	editor = nvim
+	autocrlf = input
+	whitespace = cr-at-eol
+[branch]
+	autosetuprebase = always
+[merge]
+	tool = meld
+[push]
+	default = current
+	autoSetupRemote = true
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[pull]
+	rebase = true
+[safe]
+	directory = /media/host-code/devices
