@@ -2,7 +2,7 @@
 	name = Craig Citro Default
 	email = craig+default@citro.net
 [includeIf "gitdir:~/code/"]
-    path = .gitconfig-abt
+    path = .gitconfig-work
 [includeIf "gitdir:~/hobby/"]
     path = .gitconfig-hobby
 [color]
