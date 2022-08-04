@@ -38,7 +38,7 @@ set nobackup
 set nowritebackup
 set updatetime=50
 
-colorscheme gruvbox
+silent! colorscheme gruvbox
 
 let mapleader = " "
 nnoremap <leader>ff :Telescope find_files<cr>

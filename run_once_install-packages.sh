@@ -1,4 +1,6 @@
 #!/bin/bash
+
+sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt install -y ripgrep neovim zsh git
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
@@ -9,4 +11,6 @@ if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/" ]; then
     git clone --depth 1 https://github.com/wbthomason/packer.nvim\
      ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 fi
+
+npm install -g intelephense typescript typescript-language-server
 
