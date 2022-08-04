@@ -1,4 +1,4 @@
-lua require('plugins')
+lua require('citro')
 
 " Disable Arrow keys in Normal mode
 map <up> <nop>
