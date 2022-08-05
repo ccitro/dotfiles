@@ -77,7 +77,6 @@ install_package git
 install_package php-cli
 install_package fzf 
 
-
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
@@ -90,6 +89,14 @@ fi
 install_npm_package intelephense intelephense
 install_npm_package tsc typescript
 install_npm_package typescript-language-server typescript-language-server 
+install_npm_package bw @bitwarden/cli 
+
+if [ ! -f "$HOME/.config/Bitwarden CLI/data.json" ]; then
+    echo "Setting up bitwarden"
+    read -p "Bitwarden server: " bwserver
+    bw config server $bwserver
+    bw login
+fi
 
 mkdir -p $HOME/opt
 if [ ! -d "$HOME/opt/lua-language-server" ]; then
