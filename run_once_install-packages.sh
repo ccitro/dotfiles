@@ -75,6 +75,7 @@ install_package neovim
 install_package zsh 
 install_package git 
 install_package php-cli
+install_package fzf 
 
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
