@@ -64,7 +64,7 @@ install_npm_package()
         echo "NPM package $package is already installed"
     else
         echo "Installing npm package $package"
-        npm install --global $package 
+        npm install --location=global $package 
     fi
 }
 
@@ -78,6 +78,7 @@ install_package php-cli
 install_package fzf 
 install_package wget 
 install_package make 
+
 
 mkdir -p $HOME/opt
 
@@ -108,6 +109,7 @@ install_npm_package typescript-language-server typescript-language-server
 install_npm_package bw @bitwarden/cli 
 install_npm_package yarn yarn
 install_npm_package pnpm pnpm
+install_npm_package bash-language-server bash-language-server 
 
 if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/" ]; then
     git clone --depth 1 https://github.com/wbthomason/packer.nvim\
