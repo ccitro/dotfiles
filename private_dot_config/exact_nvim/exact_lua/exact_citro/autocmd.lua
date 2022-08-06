@@ -7,3 +7,11 @@ vim.api.nvim_create_autocmd("VimEnter", {
     group = autoCwd,
 })
 
+local eslintFmt = vim.api.nvim_create_augroup("EslintFmt", { clear = true })
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = { "*.tsx", "*.ts", "*.js", "*.jsx" },
+    callback = function()
+        vim.api.nvim_command("EslintFixAll")
+    end,
+    group = eslintFmt
+})

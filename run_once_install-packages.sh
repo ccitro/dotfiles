@@ -110,6 +110,7 @@ install_npm_package bw @bitwarden/cli
 install_npm_package yarn yarn
 install_npm_package pnpm pnpm
 install_npm_package bash-language-server bash-language-server 
+install_npm_package vscode-eslint-language-server vscode-langservers-extracted 
 
 if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/" ]; then
     git clone --depth 1 https://github.com/wbthomason/packer.nvim\
