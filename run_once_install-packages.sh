@@ -64,7 +64,7 @@ install_npm_package()
         echo "NPM package $package is already installed"
     else
         echo "Installing npm package $package"
-        npm install -g $package 
+        npm install --global $package 
     fi
 }
 
@@ -76,20 +76,43 @@ install_package zsh
 install_package git 
 install_package php-cli
 install_package fzf 
+install_package wget 
+install_package make 
+
+mkdir -p $HOME/opt
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
-if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/" ]; then
-    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+if [ -d "$HOME/.npm" ]; then
+    echo "Removing old .npm directory..."
+    rm -rf "$HOME/.npm"
+fi
+
+if [ -d "$HOME/.nvm" ]; then
+    echo "Removing old .nvm directory..."
+    rm -rf "$HOME/.nvm"
+fi
+
+if [ ! -d "$HOME/opt/n" ]; then
+    echo "Installing n"
+    curl -L https://bit.ly/n-install | N_PREFIX=$HOME/opt/n bash
+    export N_PREFIX="$HOME/opt/n"
+    export PATH="$PATH:$N_PREFIX/bin"
 fi
 
 install_npm_package intelephense intelephense
 install_npm_package tsc typescript
 install_npm_package typescript-language-server typescript-language-server 
 install_npm_package bw @bitwarden/cli 
+install_npm_package yarn yarn
+install_npm_package pnpm pnpm
+
+if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/" ]; then
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+        ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+fi
 
 if [ ! -f "$HOME/.config/Bitwarden CLI/data.json" ]; then
     echo "Setting up bitwarden"
@@ -98,7 +121,6 @@ if [ ! -f "$HOME/.config/Bitwarden CLI/data.json" ]; then
     bw login
 fi
 
-mkdir -p $HOME/opt
 if [ ! -d "$HOME/opt/lua-language-server" ]; then
     mkdir -p $HOME/opt/lua-language-server
     cd $HOME/opt/lua-language-server
