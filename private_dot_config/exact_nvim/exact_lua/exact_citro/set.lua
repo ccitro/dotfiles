@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 
+vim.opt.splitright = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -21,6 +22,6 @@ vim.opt.scrolloff = 8
 -- vim.opt.noshowmode = true
 vim.opt.completeopt = "menuone,noinsert,noselect"
 vim.opt.signcolumn = "yes"
-vim.opt.cmdheight = 2
+-- vim.opt.cmdheight = 2
 vim.opt.backup = false
 vim.opt.updatetime = 50
