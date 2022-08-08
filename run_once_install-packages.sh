@@ -124,6 +124,23 @@ if [ ! -f "$HOME/.config/Bitwarden CLI/data.json" ]; then
     bw login
 fi
 
+if ! executable_in_path "composer"; then
+    echo "Installing composer..."
+    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    php composer-setup.php --install-dir=$HOME/bin --filename=composer 
+    php -r "unlink('composer-setup.php');"
+fi
+
+# if [ ! -d "$HOME/opt/phpactor" ]; then
+#     echo "Installing phpactor..."
+#     mkdir -p $HOME/opt
+#     cd $HOME/opt
+#     git clone git@github.com:phpactor/phpactor
+#     cd phpactor
+#     composer install
+#     ln -s $HOME/opt/phpactor/bin/phpactor $HOME/bin/phpactor
+# fi
+
 if [ ! -d "$HOME/opt/lua-language-server" ]; then
     mkdir -p $HOME/opt/lua-language-server
     cd $HOME/opt/lua-language-server
