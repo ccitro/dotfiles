@@ -9,6 +9,7 @@ local function SetupColors()
     vim.opt.background = "dark"
 
     vim.cmd("colorscheme " .. vim.g.citro_colorscheme)
+    vim.cmd("AirlineTheme " .. vim.g.citro_colorscheme)
 end
 
 SetupColors()

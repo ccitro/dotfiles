@@ -6,6 +6,8 @@ return require('packer').startup(function(use)
     use 'folke/tokyonight.nvim'
     use 'tpope/vim-fugitive'
     use 'kyazdani42/nvim-web-devicons'
+    use 'vim-airline/vim-airline'
+    use 'vim-airline/vim-airline-themes'
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
