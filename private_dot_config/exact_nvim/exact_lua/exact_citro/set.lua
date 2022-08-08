@@ -1,5 +1,7 @@
 vim.g.mapleader = " "
 
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 vim.opt.splitright = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
