@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
     use 'vim-airline/vim-airline'
     use 'vim-airline/vim-airline-themes'
     use 'edkolev/tmuxline.vim'
+    use 'airblade/vim-gitgutter'
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
