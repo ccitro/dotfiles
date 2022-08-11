@@ -78,6 +78,7 @@ install_package php-cli
 install_package fzf 
 install_package wget 
 install_package make 
+install_package fonts-powerline
 
 
 mkdir -p $HOME/opt
