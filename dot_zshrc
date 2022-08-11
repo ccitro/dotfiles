@@ -109,3 +109,23 @@ bindkey -s ^f "tmux-sessionizer\n"
 
 
 export N_PREFIX="$HOME/opt/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+
+###-begin-tina.js-completions-###
+#
+# yargs command completion script
+#
+# Installation: /usr/bin/tina.js completion >> ~/.zshrc
+#    or /usr/bin/tina.js completion >> ~/.zsh_profile on OSX.
+#
+_tina.js_yargs_completions()
+{
+  local reply
+  local si=$IFS
+  IFS=$'
+' reply=($(COMP_CWORD="$((CURRENT-1))" COMP_LINE="$BUFFER" COMP_POINT="$CURSOR" /usr/bin/tina.js --get-yargs-completions "${words[@]}"))
+  IFS=$si
+  _describe 'values' reply
+}
+compdef _tina.js_yargs_completions tina.js
+###-end-tina.js-completions-###
+
