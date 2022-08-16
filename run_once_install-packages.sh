@@ -79,6 +79,7 @@ install_package fzf
 install_package wget 
 install_package make 
 install_package fonts-powerline
+install_package xsel 
 
 
 mkdir -p $HOME/opt
