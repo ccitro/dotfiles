@@ -17,6 +17,5 @@ require("nvim-tree").setup({
 -- https://github.com/kyazdani42/nvim-tree.lua/issues/1368#issuecomment-1195570841
 
 nnoremap("<leader>t", function()
-    require"nvim-tree".toggle(false, true)
+    require "nvim-tree".toggle(false, true)
 end)
-
