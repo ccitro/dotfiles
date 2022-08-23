@@ -5,6 +5,7 @@ return require('packer').startup(function(use)
     use 'gruvbox-community/gruvbox'
     use 'folke/tokyonight.nvim'
     use 'tpope/vim-fugitive'
+    use 'tpope/vim-commentary'
     use 'kyazdani42/nvim-web-devicons'
     use 'vim-airline/vim-airline'
     use 'vim-airline/vim-airline-themes'
