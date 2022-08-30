@@ -105,9 +105,6 @@ alias vi="nvim"
 
 unsetopt BEEP
 
-bindkey -s ^f "tmux-sessionizer\n"
-
-
 export N_PREFIX="$HOME/opt/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 
 ###-begin-tina.js-completions-###
