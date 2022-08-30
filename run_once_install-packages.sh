@@ -70,6 +70,7 @@ install_npm_package()
 
 install_ppa neovim-ppa/stable
 
+install_package tmuxinator
 install_package ripgrep
 install_package neovim 
 install_package zsh 
