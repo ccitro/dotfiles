@@ -68,8 +68,9 @@ install_npm_package()
     fi
 }
 
-install_ppa neovim-ppa/stable
+install_ppa neovim-ppa/unstable 
 
+install_package nvim
 install_package tmuxinator
 install_package ripgrep
 install_package neovim 
