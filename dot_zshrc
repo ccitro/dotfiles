@@ -105,6 +105,7 @@ alias vim="nvim"
 alias vi="nvim"
 
 unsetopt BEEP
+unset LESS;
 
 # for deno
 export DENO_INSTALL="$HOME/.deno"
@@ -130,4 +131,7 @@ _tina.js_yargs_completions()
 }
 compdef _tina.js_yargs_completions tina.js
 ###-end-tina.js-completions-###
+
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
 
