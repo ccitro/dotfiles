@@ -132,6 +132,4 @@ _tina.js_yargs_completions()
 compdef _tina.js_yargs_completions tina.js
 ###-end-tina.js-completions-###
 
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-source /usr/share/doc/fzf/examples/completion.zsh
-
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
