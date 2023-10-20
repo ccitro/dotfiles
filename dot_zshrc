@@ -136,7 +136,7 @@ compdef _tina.js_yargs_completions tina.js
 ###-end-tina.js-completions-###
 
 # ssh agent
-[ -f keychain ] && eval `keychain --eval --agents ssh id_rsa`
+[ -f /usr/bin/keychain ] && eval `keychain --eval --agents ssh id_rsa`
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
