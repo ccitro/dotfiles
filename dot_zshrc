@@ -128,7 +128,7 @@ _tina.js_yargs_completions()
   local reply
   local si=$IFS
   IFS=$'
-' reply=($(COMP_CWORD="$((CURRENT-1))" COMP_LINE="$BUFFER" COMP_POINT="$CURSOR" /usr/bin/tina.js --get-yargs-completions "${words[@]}"))
+' reply=($(COMP_CWORD="$((CURRENT-1))" COMP_LINE="$BUFFER" COMP_POINT="$CURSOR" /Users/craigc/bin/tina.js --get-yargs-completions "${words[@]}"))
   IFS=$si
   _describe 'values' reply
 }
@@ -138,9 +138,7 @@ compdef _tina.js_yargs_completions tina.js
 # ssh agent
 eval `keychain --eval --agents ssh id_rsa`
 
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-source /usr/share/doc/fzf/examples/completion.zsh
-
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # bun completions
 [ -s "/home/craig/.bun/_bun" ] && source "/home/craig/.bun/_bun"
@@ -148,3 +146,9 @@ source /usr/share/doc/fzf/examples/completion.zsh
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/craigc/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
