@@ -1,7 +1,7 @@
 [user]
 	name = Craig Citro 
 	email = craig@citro.net
-[includeIf "hasconfig:remote.*.url:git@source.abt.com\*"]
+[includeIf "hasconfig:remote.*.url:git@source.abt.com*/**"]
   path = .gitconfig-abt
 [color]
 	diff = auto
